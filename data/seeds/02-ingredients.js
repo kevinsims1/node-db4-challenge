@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('ingredients').insert([
-        {id: 1, Name: 'tomato'},
-        {id: 2, Name: 'garlic'},
-        {id: 3, Name: 'eggs'}
+        {id: 1, name: 'tomato'},
+        {id: 2, name: 'garlic'},
+        {id: 3, name: 'eggs'}
       ]);
     });
 };

@@ -24,6 +24,11 @@ exports.up = function(knex) {
     tbl
         .string('instructions')
         .notNullable()
+
+    tbl
+        .integer('step_number')
+        .notNullable()
+        
 })
 
     .createTable('ingredients', tbl => {
