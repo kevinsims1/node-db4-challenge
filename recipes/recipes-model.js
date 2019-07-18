@@ -3,7 +3,8 @@ const db = require('../data/dbConfig.js')
 module.exports = {
     getRecipes,
     getShoppingList,
-    getInstructions
+    getInstructions,
+    getRecipeById
   };
 
   function getRecipes() {
@@ -20,6 +21,11 @@ function getShoppingList(id) {
 function getInstructions(recipe_id){
   return db('recipe_steps')
     .where({recipe_id})
+}
+
+function getRecipeById(id) {
+  return db('recipes')
+    .where({id})
 }
 
 // getRecipes(): should return a list of all recipes in the database.
